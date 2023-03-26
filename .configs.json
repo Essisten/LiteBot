@@ -1,0 +1,4 @@
+{
+	"maxRandomsPerRequest": 99999999,
+	"randomEnable": true
+}
