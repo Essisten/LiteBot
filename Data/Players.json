@@ -1,0 +1,17 @@
+{
+	"334913416": {
+		"money": 0,
+		"dust": {
+			"Red": 0,
+			"Yellow": 0,
+			"Blue": 0,
+			"Purple": 0,
+			"White": 0,
+			"Black": 0
+		},
+		"armor": [],
+		"weapon": [],
+		"misc": [],
+		"items": [{"name": "Artem"}]
+	}
+}

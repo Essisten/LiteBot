@@ -1,5 +1,3 @@
-var main = require('./index')
-
 class ShoppingCommands
 {
   static AddItem(message, main)
@@ -130,7 +128,7 @@ class ShoppingCommands
     if (!main.isGod(message.senderId)) return;
     let shop_id = Number(message.$match[1]) - 1,
         user_id = Number(message.$match[2]);
-    if (shop_id + 1 >= Object.keys(main.ShopItems).length)
+    if (shop_id >= Object.keys(main.ShopItems).length)
     {
       message.send("Фракция не существует...");
       return;

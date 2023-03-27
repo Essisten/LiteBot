@@ -1,5 +1,3 @@
-var main = require('./index')
-
 class GeneralCommands
 {
   static CalculateStatsSum(pair, sp)
