@@ -13,13 +13,13 @@ class GeneralCommands
   static RandomCommand(message, main)
   {
     //1, 2 - диапазон рандома, 3 - количество, 4 и 5 - диапазон успеха, 6 - показать или скрыть вывод результата
-    if (!main.randomEnable) return;
+    if (!main.conf.randomEnable) return;
     if (message.$match[3] == undefined)
       message.send(main.Random(Number(message.$match[1]), Number(message.$match[2])));
     else
     {
       var k = Number(message.$match[3]), counter = 0, fin = "";
-      if (k > maxRandomsPerRequest) return;
+      if (k > main.conf.maxRandomsPerRequest) return;
       for (var i = 0; i < k; i++)
       {
         if (fin.length > 4050)

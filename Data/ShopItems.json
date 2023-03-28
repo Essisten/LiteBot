@@ -2,6 +2,11 @@
 	"Асьянс": {
 		"Trader": 376582792,
 		"Members": [],
-		"Items": []
+		"Items": [
+			{
+				"Name": "РЕЗНЯ",
+				"Description": "Сочная"
+			}
+		]
 	}
 }

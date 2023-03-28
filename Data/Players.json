@@ -1,4 +1,26 @@
 {
+	"133658139": {
+		"money": 0,
+		"dust": {
+			"Red": 0,
+			"Yellow": 0,
+			"Blue": 0,
+			"Purple": 0,
+			"White": 0,
+			"Black": 0
+		},
+		"armor": [],
+		"weapon": [],
+		"misc": [],
+		"items": [
+			{
+				"id": 5,
+				"name": "похуит",
+				"description": "",
+				"type": 3
+			}
+		]
+	},
 	"334913416": {
 		"money": 0,
 		"dust": {
@@ -12,6 +34,77 @@
 		"armor": [],
 		"weapon": [],
 		"misc": [],
-		"items": [{"name": "Artem"}]
+		"items": []
+	},
+	"376582792": {
+		"money": 0,
+		"dust": {
+			"Red": 0,
+			"Yellow": 0,
+			"Blue": 0,
+			"Purple": 0,
+			"White": 0,
+			"Black": 0
+		},
+		"armor": [],
+		"weapon": [],
+		"misc": [],
+		"items": []
+	},
+	"557009179": {
+		"money": 0,
+		"dust": {
+			"Red": 0,
+			"Yellow": 0,
+			"Blue": 0,
+			"Purple": 0,
+			"White": 0,
+			"Black": 0
+		},
+		"armor": [],
+		"weapon": [],
+		"misc": [],
+		"items": [
+			{
+				"id": 0,
+				"name": "🦒",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 4,
+				"name": "🥵",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 6,
+				"name": "🍉",
+				"description": "",
+				"type": 3
+			}
+		]
+	},
+	"559144282": {
+		"money": 0,
+		"dust": {
+			"Red": 0,
+			"Yellow": 0,
+			"Blue": 0,
+			"Purple": 0,
+			"White": 0,
+			"Black": 0
+		},
+		"armor": [],
+		"weapon": [],
+		"misc": [],
+		"items": [
+			{
+				"id": 2,
+				"name": "🍺🐟",
+				"description": "",
+				"type": 3
+			}
+		]
 	}
 }

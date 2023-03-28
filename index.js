@@ -25,9 +25,14 @@ class MainStuff
     constructor()
     {
       this.main = this;
-      this.Gods = [559144282, 334913416];	//Боги
-      this.randomEnable = true;
-      this.maxRandomsPerRequest = 99999999;	//Максимальное число бросков рандома для игрока
+      this.conf =
+      {
+        Gods: [559144282, 334913416],
+    		maxRandomsPerRequest: 99999999,
+    		randomEnable: true,
+        maxItem: 15,
+        maxItemID: 0
+      }
       this.ShopItems = require("./Data/ShopItems.json");
       this.Players = require("./Data/Players.json");
       this.loadConfigs();
@@ -42,25 +47,18 @@ class MainStuff
     
     isGod(id)
     {
-    	return this.Gods.includes(id);
+    	return this.conf.Gods.includes(id);
     }
     
     saveConfigs()
     {
-    	let conf =
-      {
-    		maxRandomsPerRequest: maxRandomsPerRequest,
-    		randomEnable: randomEnable
-      }
-      let json = JSON.stringify(conf, null, "\t");
+      let json = JSON.stringify(this.conf, null, "\t");
     	fs.writeFileSync('./Data/configs.json', json);
     }
     
     loadConfigs()
     {
-    	let file = JSON.parse(fs.readFileSync('./Data/configs.json'));
-    	this.maxRandomsPerRequest = file.maxRandomsPerRequest;
-    	this.randomEnable = file.randomEnable;
+    	this.conf = JSON.parse(fs.readFileSync('./Data/configs.json'));
     }
     
     SaveShop()
@@ -141,7 +139,7 @@ hearManager.hear(/^!Продавец (\d+) \[id(\d+)\|(.*)\]$/i, async (message)
 
 hearManager.hear(/^!Предмет (\d+)(?: (\d+))?$/i, async (message) => shopping.ShowItem(message, main));
 
-hearManager.hear(/^!Очистить магазин( (\d+))?$/im, async (message) => shopping.CleanupShop(message, main));
+hearManager.hear(/^!Очистить магазин( (\d+))?$/i, async (message) => shopping.CleanupShop(message, main));
 
 //Фракции
 hearManager.hear(/^!Фракции$/i, async (message) => fract.ShowFractList(message, main));
@@ -160,6 +158,10 @@ hearManager.hear(/^!Участники(?: (\d+))?$/i, async (message) => fract.S
 hearManager.hear(/^!Инвентарь(?: \[id(\d+)\|(.*)\])?$/i, async (message) => inv.ShowInventory(message, main));
 
 hearManager.hear(/^!Прах(?: \[id(\d+)\|(.*)\])?$/i, async (message) => inv.ShowDust(message, main));
+
+hearManager.hear(/^!Взять(?: \[id(\d+)\|(.*)\])? (?:(оружие)|(броню)|(брелок)|(прочее)) (.+)(?:\n(.+))?$/im, async (message) => inv.TakeItem(message, main));
+
+hearManager.hear(/^!(?:(?:Выбросить)|(?:Выкинуть)) (\d+)(?: \[id(\d+)\|(.*)\])?$/i, async (message) => inv.DropItem(message, main));
 
 //Авторизация бота.
 updates.start().catch(console.error);

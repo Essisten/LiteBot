@@ -1,4 +1,10 @@
 {
+	"Gods": [
+		559144282,
+		334913416
+	],
 	"maxRandomsPerRequest": 99999999,
-	"randomEnable": true
+	"randomEnable": true,
+	"maxItem": 15,
+	"maxItemID": 0
 }
