@@ -98,14 +98,24 @@ hearManager.hear(/^!(?:(?:Опыт)|(?:Exp)) (\d{1,4}) (\d{1,4})(?: (\d+))?$/i, 
 //Админские команды:
 hearManager.hear(/^!рандом макс (\d+)$/i, async (message) => {
 	if (!main.isGod(message.senderId)) return;
-	maxRandomsPerRequest = Number(message.$match[1]);
-	message.send("Теперь лимит на число бросков за раз = " + maxRandomsPerRequest);
+	main.conf.maxRandomsPerRequest = Number(message.$match[1]);
+  main.saveConfigs();
+	message.send("Теперь лимит на число бросков за раз = " + main.conf.maxRandomsPerRequest);
 });
 
 hearManager.hear(/^!рандом (?:(?:вкл)|(?:выкл))$/i, async (message) => {
 	if (!main.isGod(message.senderId)) return;
-	randomEnable = !randomEnable;
-	message.send("Рандом теперь " + (randomEnable ? "включён": "выключен"));
+	main.conf.randomEnable = !main.conf.randomEnable;
+  main.saveConfigs();
+	message.send("Рандом теперь " + (main.conf.randomEnable ? "включён": "выключен"));
+});
+
+hearManager.hear(/^!макс место (\d+)$/i, async (message) =>
+{
+	if (!main.isGod(message.senderId)) return;
+  main.conf.maxItem = Number(message.$match[1]);
+  main.saveConfigs();
+  message.send(`Максимальное место в инвентаре теперь равно ${main.conf.maxItem}`);
 });
 
 hearManager.hear(/^!сохр$/i, async (message) => {
@@ -162,6 +172,14 @@ hearManager.hear(/^!Прах(?: \[id(\d+)\|(.*)\])?$/i, async (message) => inv.S
 hearManager.hear(/^!Взять(?: \[id(\d+)\|(.*)\])? (?:(оружие)|(броню)|(брелок)|(прочее)) (.+)(?:\n(.+))?$/im, async (message) => inv.TakeItem(message, main));
 
 hearManager.hear(/^!(?:(?:Выбросить)|(?:Выкинуть)) (\d+)(?: \[id(\d+)\|(.*)\])?$/i, async (message) => inv.DropItem(message, main));
+
+hearManager.hear(/^!(?:(?:Изучить)|(?:Осмотреть)) (\d+)(?: \[id(\d+)\|(.*)\])?$/i, async (message) => inv.ShowItem(message, main));
+
+hearManager.hear(/^!(?:(?:надеть)|(?:снять)) (\d+)(?: \[id(\d+)\|(.*)\])?$/i, async (message) => inv.UseItem(message, main));
+
+hearManager.hear(/^(?:([\+\-])прах) (.{5,10}) (\d{1,8})(?: \[id(\d+)\|(.*)\])?$/i, async (message) => inv.UseDust(message, main));
+
+hearManager.hear(/^(?:([\+\-])ДМ) (\d{1,8})(?: \[id(\d+)\|(.*)\])?$/i, async (message) => inv.UseMoney(message, main));
 
 //Авторизация бота.
 updates.start().catch(console.error);

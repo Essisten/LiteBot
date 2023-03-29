@@ -18,23 +18,110 @@
 				"name": "похуит",
 				"description": "",
 				"type": 3
+			},
+			{
+				"id": 18,
+				"name": "бесконечный🍺",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 40,
+				"name": "абсолютная лоля с любым обликом",
+				"description": "",
+				"type": 4
+			},
+			{
+				"id": 61,
+				"name": "хентай с тентаклями",
+				"description": "",
+				"type": 1
+			},
+			{
+				"id": 63,
+				"name": "[id376582792|@geoxorstyle] ",
+				"description": "Арбузь",
+				"type": 4
 			}
 		]
 	},
 	"334913416": {
-		"money": 0,
+		"money": 6555,
 		"dust": {
 			"Red": 0,
 			"Yellow": 0,
 			"Blue": 0,
 			"Purple": 0,
-			"White": 0,
-			"Black": 0
+			"White": 4,
+			"Black": -99999
 		},
-		"armor": [],
-		"weapon": [],
-		"misc": [],
-		"items": []
+		"armor": [
+			65
+		],
+		"weapon": [
+			60,
+			64
+		],
+		"misc": [
+			67,
+			68
+		],
+		"items": [
+			{
+				"id": 60,
+				"name": "порно",
+				"description": "",
+				"type": 1
+			},
+			{
+				"id": 62,
+				"name": "Рома",
+				"description": "Не спит",
+				"type": 4
+			},
+			{
+				"id": 64,
+				"name": "хентай",
+				"description": "",
+				"type": 1
+			},
+			{
+				"id": 65,
+				"name": "арбуз",
+				"description": "",
+				"type": 2
+			},
+			{
+				"id": 66,
+				"name": "пельмень",
+				"description": "",
+				"type": 2
+			},
+			{
+				"id": 67,
+				"name": "говно",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 68,
+				"name": "говно",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 69,
+				"name": "говно",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 70,
+				"name": "говно",
+				"description": "",
+				"type": 3
+			}
+		]
 	},
 	"376582792": {
 		"money": 0,
@@ -49,7 +136,120 @@
 		"armor": [],
 		"weapon": [],
 		"misc": [],
-		"items": []
+		"items": [
+			{
+				"id": 8,
+				"name": "🍉",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 41,
+				"name": "🍉",
+				"description": "",
+				"type": 4
+			},
+			{
+				"id": 42,
+				"name": "🍉",
+				"description": "",
+				"type": 4
+			},
+			{
+				"id": 43,
+				"name": "🍉",
+				"description": "",
+				"type": 4
+			},
+			{
+				"id": 44,
+				"name": "🍉",
+				"description": "",
+				"type": 4
+			},
+			{
+				"id": 45,
+				"name": "🍉",
+				"description": "",
+				"type": 4
+			},
+			{
+				"id": 46,
+				"name": "🍉",
+				"description": "",
+				"type": 4
+			},
+			{
+				"id": 47,
+				"name": "🍉",
+				"description": "",
+				"type": 4
+			},
+			{
+				"id": 48,
+				"name": "🍉",
+				"description": "",
+				"type": 4
+			},
+			{
+				"id": 49,
+				"name": "🍉",
+				"description": "",
+				"type": 4
+			},
+			{
+				"id": 50,
+				"name": "🍉",
+				"description": "",
+				"type": 4
+			},
+			{
+				"id": 51,
+				"name": "🍉",
+				"description": "",
+				"type": 4
+			},
+			{
+				"id": 52,
+				"name": "🍉",
+				"description": "",
+				"type": 4
+			},
+			{
+				"id": 53,
+				"name": "🍉",
+				"description": "",
+				"type": 4
+			},
+			{
+				"id": 54,
+				"name": "🍉",
+				"description": "",
+				"type": 4
+			}
+		]
+	},
+	"386006456": {
+		"money": 0,
+		"dust": {
+			"Red": 0,
+			"Yellow": 0,
+			"Blue": 0,
+			"Purple": 0,
+			"White": 0,
+			"Black": 0
+		},
+		"armor": [],
+		"weapon": [],
+		"misc": [],
+		"items": [
+			{
+				"id": 25,
+				"name": "лоля",
+				"description": "",
+				"type": 4
+			}
+		]
 	},
 	"557009179": {
 		"money": 0,
@@ -66,20 +266,20 @@
 		"misc": [],
 		"items": [
 			{
-				"id": 0,
+				"id": 7,
 				"name": "🦒",
 				"description": "",
 				"type": 3
 			},
 			{
-				"id": 4,
-				"name": "🥵",
+				"id": 9,
+				"name": "corp, anam agus inntinn TraDiLo",
 				"description": "",
 				"type": 3
 			},
 			{
-				"id": 6,
-				"name": "🍉",
+				"id": 19,
+				"name": "corp, anam agus inntinn YusK",
 				"description": "",
 				"type": 3
 			}
@@ -92,7 +292,7 @@
 			"Yellow": 0,
 			"Blue": 0,
 			"Purple": 0,
-			"White": 0,
+			"White": 1,
 			"Black": 0
 		},
 		"armor": [],
@@ -100,8 +300,92 @@
 		"misc": [],
 		"items": [
 			{
-				"id": 2,
-				"name": "🍺🐟",
+				"id": 1,
+				"name": "🍺",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 3,
+				"name": "🍺",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 4,
+				"name": "🍺",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 5,
+				"name": "🍺",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 6,
+				"name": "🍺",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 7,
+				"name": "🍺",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 8,
+				"name": "🍺",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 9,
+				"name": "🍺",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 10,
+				"name": "🍺",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 11,
+				"name": "🍺",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 12,
+				"name": "🍺",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 13,
+				"name": "🍺",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 14,
+				"name": "🍺",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 15,
+				"name": "🍺",
+				"description": "",
+				"type": 3
+			},
+			{
+				"id": 16,
+				"name": "🍺",
 				"description": "",
 				"type": 3
 			}
