@@ -2,11 +2,11 @@
 	"133658139": {
 		"money": 0,
 		"dust": {
+			"White": 0,
 			"Red": 0,
 			"Yellow": 0,
 			"Blue": 0,
 			"Purple": 0,
-			"White": 0,
 			"Black": 0
 		},
 		"armor": [],
@@ -14,229 +14,66 @@
 		"misc": [],
 		"items": [
 			{
-				"id": 5,
+				"id": 106,
 				"name": "похуит",
-				"description": "",
+				"img": "",
+				"description": "Тупо похуй",
 				"type": 3
 			},
 			{
-				"id": 18,
-				"name": "бесконечный🍺",
-				"description": "",
-				"type": 3
-			},
-			{
-				"id": 40,
-				"name": "абсолютная лоля с любым обликом",
-				"description": "",
+				"id": 107,
+				"name": "[id376582792|@geoxorstyle] ",
+				"img": "",
+				"description": "Неиссякаемый источник арбузов, арбузь, арбузер.",
 				"type": 4
 			},
 			{
-				"id": 61,
-				"name": "хентай с тентаклями",
-				"description": "",
-				"type": 1
-			},
-			{
-				"id": 63,
-				"name": "[id376582792|@geoxorstyle] ",
-				"description": "Арбузь",
+				"id": 109,
+				"name": "неиссякаемая кружка пива",
+				"img": "photo133658139_457418236_ca8166f64e7f8e56f2",
+				"description": "Легендарный артефакт ненавидимый всеми барменами и пивоварами. Наполненная восхитительным пивом, что поднимет вам настроение и дарует прохладу в жаркий день. Неуязвим, невозможно потерять или украсть. Купля/продажа возможна лишь добровольным методом. Сделки под угрозами, принуждением и тому подобным считаются недействительными.",
 				"type": 4
 			}
 		]
 	},
-	"334913416": {
-		"money": 6555,
+	"185782285": {
+		"money": 0,
 		"dust": {
+			"White": 0,
 			"Red": 0,
 			"Yellow": 0,
 			"Blue": 0,
 			"Purple": 0,
-			"White": 4,
-			"Black": -99999
+			"Black": 0
 		},
-		"armor": [
-			65
-		],
-		"weapon": [
-			60,
-			64
-		],
-		"misc": [
-			67,
-			68
-		],
-		"items": [
-			{
-				"id": 60,
-				"name": "порно",
-				"description": "",
-				"type": 1
-			},
-			{
-				"id": 62,
-				"name": "Рома",
-				"description": "Не спит",
-				"type": 4
-			},
-			{
-				"id": 64,
-				"name": "хентай",
-				"description": "",
-				"type": 1
-			},
-			{
-				"id": 65,
-				"name": "арбуз",
-				"description": "",
-				"type": 2
-			},
-			{
-				"id": 66,
-				"name": "пельмень",
-				"description": "",
-				"type": 2
-			},
-			{
-				"id": 67,
-				"name": "говно",
-				"description": "",
-				"type": 3
-			},
-			{
-				"id": 68,
-				"name": "говно",
-				"description": "",
-				"type": 3
-			},
-			{
-				"id": 69,
-				"name": "говно",
-				"description": "",
-				"type": 3
-			},
-			{
-				"id": 70,
-				"name": "говно",
-				"description": "",
-				"type": 3
-			}
-		]
+		"armor": [],
+		"weapon": [],
+		"misc": [],
+		"items": []
+	},
+	"334913416": {
+		"money": 0,
+		"dust": {
+			"White": 0,
+			"Red": 0,
+			"Yellow": 0,
+			"Blue": 0,
+			"Purple": 0,
+			"Black": 0
+		},
+		"armor": [],
+		"weapon": [],
+		"misc": [],
+		"items": []
 	},
 	"376582792": {
 		"money": 0,
 		"dust": {
-			"Red": 0,
-			"Yellow": 0,
-			"Blue": 0,
-			"Purple": 0,
 			"White": 0,
-			"Black": 0
-		},
-		"armor": [],
-		"weapon": [],
-		"misc": [],
-		"items": [
-			{
-				"id": 8,
-				"name": "🍉",
-				"description": "",
-				"type": 3
-			},
-			{
-				"id": 41,
-				"name": "🍉",
-				"description": "",
-				"type": 4
-			},
-			{
-				"id": 42,
-				"name": "🍉",
-				"description": "",
-				"type": 4
-			},
-			{
-				"id": 43,
-				"name": "🍉",
-				"description": "",
-				"type": 4
-			},
-			{
-				"id": 44,
-				"name": "🍉",
-				"description": "",
-				"type": 4
-			},
-			{
-				"id": 45,
-				"name": "🍉",
-				"description": "",
-				"type": 4
-			},
-			{
-				"id": 46,
-				"name": "🍉",
-				"description": "",
-				"type": 4
-			},
-			{
-				"id": 47,
-				"name": "🍉",
-				"description": "",
-				"type": 4
-			},
-			{
-				"id": 48,
-				"name": "🍉",
-				"description": "",
-				"type": 4
-			},
-			{
-				"id": 49,
-				"name": "🍉",
-				"description": "",
-				"type": 4
-			},
-			{
-				"id": 50,
-				"name": "🍉",
-				"description": "",
-				"type": 4
-			},
-			{
-				"id": 51,
-				"name": "🍉",
-				"description": "",
-				"type": 4
-			},
-			{
-				"id": 52,
-				"name": "🍉",
-				"description": "",
-				"type": 4
-			},
-			{
-				"id": 53,
-				"name": "🍉",
-				"description": "",
-				"type": 4
-			},
-			{
-				"id": 54,
-				"name": "🍉",
-				"description": "",
-				"type": 4
-			}
-		]
-	},
-	"386006456": {
-		"money": 0,
-		"dust": {
 			"Red": 0,
 			"Yellow": 0,
 			"Blue": 0,
 			"Purple": 0,
-			"White": 0,
 			"Black": 0
 		},
 		"armor": [],
@@ -244,150 +81,109 @@
 		"misc": [],
 		"items": [
 			{
-				"id": 25,
-				"name": "лоля",
+				"id": 91,
+				"name": "🍉",
+				"img": "",
 				"description": "",
 				"type": 4
-			}
-		]
-	},
-	"557009179": {
-		"money": 0,
-		"dust": {
-			"Red": 0,
-			"Yellow": 0,
-			"Blue": 0,
-			"Purple": 0,
-			"White": 0,
-			"Black": 0
-		},
-		"armor": [],
-		"weapon": [],
-		"misc": [],
-		"items": [
-			{
-				"id": 7,
-				"name": "🦒",
-				"description": "",
-				"type": 3
 			},
 			{
-				"id": 9,
-				"name": "corp, anam agus inntinn TraDiLo",
+				"id": 92,
+				"name": "🍉",
+				"img": "",
 				"description": "",
-				"type": 3
+				"type": 4
 			},
 			{
-				"id": 19,
-				"name": "corp, anam agus inntinn YusK",
+				"id": 93,
+				"name": "🍉",
+				"img": "",
 				"description": "",
-				"type": 3
-			}
-		]
-	},
-	"559144282": {
-		"money": 0,
-		"dust": {
-			"Red": 0,
-			"Yellow": 0,
-			"Blue": 0,
-			"Purple": 0,
-			"White": 1,
-			"Black": 0
-		},
-		"armor": [],
-		"weapon": [],
-		"misc": [],
-		"items": [
-			{
-				"id": 1,
-				"name": "🍺",
-				"description": "",
-				"type": 3
+				"type": 4
 			},
 			{
-				"id": 3,
-				"name": "🍺",
+				"id": 94,
+				"name": "🍉",
+				"img": "",
 				"description": "",
-				"type": 3
+				"type": 4
 			},
 			{
-				"id": 4,
-				"name": "🍺",
+				"id": 95,
+				"name": "🍉",
+				"img": "",
 				"description": "",
-				"type": 3
+				"type": 4
 			},
 			{
-				"id": 5,
-				"name": "🍺",
+				"id": 96,
+				"name": "🍉",
+				"img": "",
 				"description": "",
-				"type": 3
+				"type": 4
 			},
 			{
-				"id": 6,
-				"name": "🍺",
+				"id": 97,
+				"name": "🍉",
+				"img": "",
 				"description": "",
-				"type": 3
+				"type": 4
 			},
 			{
-				"id": 7,
-				"name": "🍺",
+				"id": 98,
+				"name": "🍉",
+				"img": "",
 				"description": "",
-				"type": 3
+				"type": 4
 			},
 			{
-				"id": 8,
-				"name": "🍺",
+				"id": 99,
+				"name": "🍉",
+				"img": "",
 				"description": "",
-				"type": 3
+				"type": 4
 			},
 			{
-				"id": 9,
-				"name": "🍺",
+				"id": 100,
+				"name": "🍉",
+				"img": "",
 				"description": "",
-				"type": 3
+				"type": 4
 			},
 			{
-				"id": 10,
-				"name": "🍺",
+				"id": 101,
+				"name": "🍉",
+				"img": "",
 				"description": "",
-				"type": 3
+				"type": 4
 			},
 			{
-				"id": 11,
-				"name": "🍺",
+				"id": 102,
+				"name": "🍉",
+				"img": "",
 				"description": "",
-				"type": 3
+				"type": 4
 			},
 			{
-				"id": 12,
-				"name": "🍺",
+				"id": 103,
+				"name": "🍉",
+				"img": "",
 				"description": "",
-				"type": 3
+				"type": 4
 			},
 			{
-				"id": 13,
-				"name": "🍺",
+				"id": 104,
+				"name": "🍉",
+				"img": "",
 				"description": "",
-				"type": 3
+				"type": 4
 			},
 			{
-				"id": 14,
-				"name": "🍺",
+				"id": 105,
+				"name": "🍉",
+				"img": "",
 				"description": "",
-				"type": 3
-			},
-			{
-				"id": 15,
-				"name": "🍺",
-				"description": "",
-				"type": 3
-			},
-			{
-				"id": 16,
-				"name": "🍺",
-				"description": "",
-				"type": 3
+				"type": 4
 			}
 		]
 	}

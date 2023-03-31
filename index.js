@@ -72,6 +72,14 @@ class MainStuff
       let json = JSON.stringify(this.Players, null, "\t");
       fs.writeFileSync("./Data/Players.json", json);
     }
+
+    getPhoto(message, index)
+  {
+    if (!message.hasAttachments('photo'))
+      return '';
+    let img = message.getAttachments('photo')[index].payload;
+     return `photo${img.owner_id}_${img.id}_${img.access_key}`
+  }
 }
 var main = new MainStuff();
 
@@ -86,7 +94,7 @@ hearManager.hear(/^!Моб (\d+) (\d+)$/i, async (message) => general.MobStatsCa
 
 hearManager.hear(/^!укл (\d+)(?: (\d+))?$/i, async (message) => general.DodgeCalculator(message));
 
-hearManager.hear(/^!(?:(хп|телосложение)|(урон)|(вын|выносливость)|(реген выносливости|рег вын)|(ловк|ловкость)) (\d{1,3})$/i, async (message) =>general.StatsCalculator(message));
+hearManager.hear(/^!(?:(хп|телосложение)|(?:(урон|сила))|(вын|выносливость)|(реген выносливости|рег вын)|(ловк|ловкость)) (\d{1,3})$/i, async (message) =>general.StatsCalculator(message));
 
 hearManager.hear(/^!ур (?:(\d{1,2}) )?(\d{1,2})$/i, async (message) => general.LvCalculator(message));
 

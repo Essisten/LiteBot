@@ -6,5 +6,5 @@
 	"maxRandomsPerRequest": 99999999,
 	"randomEnable": true,
 	"maxItem": 15,
-	"maxItemID": 71
+	"maxItemID": 110
 }

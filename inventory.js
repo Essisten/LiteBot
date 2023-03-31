@@ -76,7 +76,8 @@ class InventoryCommands
       type = 4;
     if (player.items.length >= main.conf.maxItem)
       return message.send('Недостаточно места в инвентаре');
-    player.items.push(new Item(main.conf.maxItemID++, item_name, item_info, type));
+    let img = main.getPhoto(message, 0);
+      player.items.push(new Item(main.conf.maxItemID++, item_name, item_info, type, img));
     if (main.conf.maxItemID > 99999)
       main.conf.maxItemID = 0;
     main.SavePlayers();
@@ -93,9 +94,9 @@ class InventoryCommands
       return message.send('Нет у тебя такого предмета');
     let selected_item = player.items[item_num - 1],
         item_id = selected_item.id;
-    player.armor = player.armor.filter((item) => item.id != item_id);
-    player.weapon = player.weapon.filter((item) => item.id != item_id);
-    player.misc = player.misc.filter((item) => item.id != item_id);
+    player.armor = player.armor.filter((item) => item != item_id);
+    player.weapon = player.weapon.filter((item) => item != item_id);
+    player.misc = player.misc.filter((item) => item != item_id);
     message.send(`${selected_item.name} выброшен`);
     player.items.splice(item_num - 1, 1);
     main.SavePlayers();
@@ -112,7 +113,7 @@ class InventoryCommands
     let selected_item = player.items[item_num - 1];
     message.send(`[${selected_item.name}]
 Тип: [${types[selected_item.type - 1]}]
-${selected_item.description}`);
+${selected_item.description}`, {attachment: selected_item.img});
   }
   
   static UseItem(message, main)
@@ -195,10 +196,11 @@ class Dust
 
 class Item
 {
-  constructor(id, name, desc, type)
+  constructor(id, name, desc, type, img)
   {
     this.id = id;
     this.name = name;
+    this.img = img;
     this.description = desc;
     this.type = type;  //1 - оружие, 2 - броня, 3 - брелок, 4 - прочее
   }
