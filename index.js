@@ -87,14 +87,14 @@ var main = new MainStuff();
 updates.on('message', hearManager.middleware);
 
 
-hearManager.hear(/^!(?:(хелп)|(help))(?: (\d+))?$/i, async (message) => help.GetHelp(message));
+hearManager.hear(/^!(?:(хелп)|(help))(?: (\d+))?$/i, async (message) => help.GetHelp(message, main));
 
 //Общиещие
 hearManager.hear(/^!Моб (\d+) (\d+)$/i, async (message) => general.MobStatsCalculator(message));
 
 hearManager.hear(/^!укл (\d+)(?: (\d+))?$/i, async (message) => general.DodgeCalculator(message));
 
-hearManager.hear(/^!(?:(хп|телосложение)|(?:(урон|сила))|(вын|выносливость)|(реген выносливости|рег вын)|(ловк|ловкость)) (\d{1,3})$/i, async (message) =>general.StatsCalculator(message));
+hearManager.hear(/^!(?:(хп|телосложение)|(?:(урон|сила))|(вын|выносливость)|(ловк|ловкость)) (\d{1,3})$/i, async (message) =>general.StatsCalculator(message));
 
 hearManager.hear(/^!ур (?:(\d{1,2}) )?(\d{1,2})$/i, async (message) => general.LvCalculator(message));
 
@@ -188,6 +188,14 @@ hearManager.hear(/^!(?:(?:надеть)|(?:снять)) (\d+)(?: \[id(\d+)\|(.*)
 hearManager.hear(/^(?:([\+\-])прах) (.{5,10}) (\d{1,8})(?: \[id(\d+)\|(.*)\])?$/i, async (message) => inv.UseDust(message, main));
 
 hearManager.hear(/^(?:([\+\-])ДМ) (\d{1,8})(?: \[id(\d+)\|(.*)\])?$/i, async (message) => inv.UseMoney(message, main));
+
+hearManager.hear(/^!сейф положить (\d+)(?: \[id(\d+)\|(.*)\])?$/i, async (message) => inv.AddItemToSafe(message, main));
+
+hearManager.hear(/^!сейф взять (\d+)(?: \[id(\d+)\|(.*)\])?$/i, async (message) => inv.RemoveItemFromSafe(message, main));
+
+hearManager.hear(/^!сейф (?:вкл|выкл)(?: \[id(\d+)\|(.*)\])?$/i, async (message) => inv.SwitchSafe(message, main));
+
+hearManager.hear(/^!сейф(?: \[id(\d+)\|(.*)\])?$/i, async (message) => inv.ShowSafe(message, main));
 
 //Авторизация бота.
 updates.start().catch(console.error);

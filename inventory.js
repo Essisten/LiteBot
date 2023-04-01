@@ -64,7 +64,7 @@ class InventoryCommands
   static TakeItem(message, main)
   {
     let player = InventoryCommands.InitPlayer(message, main, message.$match[1]),
-        type = 1, item_name = message.$match[7], item_info = message.$match[8];
+        type = 1, item_name = message.$match[7].trim(), item_info = message.text.replace(/^(.+)\n/i, '');
     if (item_info == undefined)
       item_info = "";
     if (player == undefined) return;
@@ -94,9 +94,7 @@ class InventoryCommands
       return message.send('Нет у тебя такого предмета');
     let selected_item = player.items[item_num - 1],
         item_id = selected_item.id;
-    player.armor = player.armor.filter((item) => item != item_id);
-    player.weapon = player.weapon.filter((item) => item != item_id);
-    player.misc = player.misc.filter((item) => item != item_id);
+    Player.Unequip(player, item_id);
     message.send(`${selected_item.name} выброшен`);
     player.items.splice(item_num - 1, 1);
     main.SavePlayers();
@@ -183,6 +181,64 @@ ${selected_item.description}`, {attachment: selected_item.img});
     }
     main.SavePlayers();
   }
+
+  static AddItemToSafe(message, main)
+  {
+    let player = InventoryCommands.InitPlayer(message, main, message.$match[2]), num = Number(message.$match[1]);
+    if (player == undefined) return;
+    if (!player.safeAvailable)
+      return message.send('Сперва купи его');
+    if (num > player.items.length || num == 0)
+      return message.send('Нет такого предмета');
+    if (player.safe.length >= 20)
+      return message.send('Сейф переполнен');
+    Player.Unequip(player, player.items[num - 1].id);
+    player.safe.push(player.items[num - 1]);
+    player.items.splice(num - 1, 1);
+    message.send('Предмет отправлен в сейф');
+    main.SavePlayers();
+  }
+
+  static RemoveItemFromSafe(message, main)
+  {
+    let player = InventoryCommands.InitPlayer(message, main, message.$match[2]), num = Number(message.$match[1]);
+    if (player == undefined) return;
+    if (!player.safeAvailable)
+      return message.send('Сперва купи его');
+    if (num > player.safe.length || num == 0)
+      return message.send('Нет такого предмета');
+    if (player.safe.length <= 0)
+      return message.send('Сейф пуст');
+    player.items.push(player.safe[num - 1]);
+    player.safe.splice(num - 1, 1);
+    message.send('Предмет отправлен в инвентарь');
+    main.SavePlayers();
+  }
+  
+  static SwitchSafe(message, main)
+  {
+    if (!main.isGod(message.senderId)) return;
+    let player = InventoryCommands.InitPlayer(message, main, message.$match[1]);
+    if (player == undefined) return;
+    player.safeAvailable = !player.safeAvailable;
+    message.send(player.safeAvailable ? 'Доступен' : 'Недоступен');
+  }
+
+  static ShowSafe(message, main)
+  {
+    if (!main.isGod(message.senderId)) return;
+    let player = InventoryCommands.InitPlayer(message, main, message.$match[1]);
+    if (player == undefined)
+      return message.send('Пользователя не существует');
+    if (player.safe.length == 0)
+      return message.send('Сейф пуст');
+    let msg = 'В сейфе хранится:\n';
+    for (let i = 0; i < player.safe.length; i++)
+      {
+        msg += `${i + 1}) ${player.safe[i].name}`;
+      }
+    message.send(msg);
+  }
 }
 
 class Dust
@@ -216,6 +272,8 @@ class Player
     this.weapon = [];
     this.misc = [];
     this.items = [];
+    this.safe = [];
+    this.safeAvailable = false;
   }
   
   static GetDustSum(player)
@@ -238,6 +296,13 @@ class Player
     for (let i of arr)
       result.push(items.find((thing) => thing.id == i).name);
     return result;
+  }
+
+  static Unequip(player, id)
+  {
+    player.armor = player.armor.filter((item) => item != id);
+    player.weapon = player.weapon.filter((item) => item != id);
+    player.misc = player.misc.filter((item) => item != id);
   }
 }
 

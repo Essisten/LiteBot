@@ -132,7 +132,6 @@ class GeneralCommands
     let sum = 0,
       numbers = [[30, 10, "здоровья"], [5, 3, "урона"],
                 [10, 2, "выносливости"],
-                 [1, 0.5, "регенерации выносливости"],
                  [0.9, 0.1, "скидку на уворот"]];
     let sp = Number(message.$match[numbers.length + 1]),
       id = 0;
@@ -145,7 +144,12 @@ class GeneralCommands
       }
     }
     sum = GeneralCommands.CalculateStatsSum(numbers[id], sp);
-    message.send(`Твои ${sp} SP в сумме дадут ${sum} ${numbers[id][2]}`);
+     let msg = `Твои ${sp} SP в сумме дадут ${sum} ${numbers[id][2]}`;
+    if (id == 2)
+    {
+      msg += `, а также пассивную регенерацию ${GeneralCommands.CalculateStatsSum([1, 0.5], sp)} выносливости`;
+    }
+    message.send(msg);
   }
 }
 
