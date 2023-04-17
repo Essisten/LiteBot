@@ -97,7 +97,7 @@ class GeneralCommands
 
   static LvCalculator(message)
   {
-  	let lv = Number(message.$match[2]), old_lv =  Number(message.$match[1]), exp = 50, add_exp = 50, exp_sum = 0;
+  	let lv = Number(message.$match[2]), old_lv =  Number(message.$match[1]), exp = 0, add_exp = 50, exp_sum = 0;
     if (message.$match[1] == undefined || old_lv == lv)
       old_lv = lv - 1;
     if (old_lv > lv)
@@ -110,18 +110,18 @@ class GeneralCommands
       message.send("!ур [текущий ур](необязательно) [новый ур]");
       return;
     }
-    for (let k = old_lv; k <= lv; k++)
+    for (let k = old_lv + 1; k <= lv; k++)
       {
         if (k < 2)
           continue;
-        for (let i = 3; i <= k; i++)
+        for (let i = 2; i <= k; i++)
         {
           if ((i - 1) % 5 == 0)
-            add_exp *= 2;
+            add_exp += 50;
           exp += add_exp;
         }
         exp_sum += exp;
-        exp = 50;
+        exp = 0;
         add_exp = 50;
       }
     message.send(`Для перехода с ${old_lv} до ${lv} уровня тебе нужно ${exp_sum} опыта`);    

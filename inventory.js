@@ -65,7 +65,7 @@ class InventoryCommands
   {
     let player = InventoryCommands.InitPlayer(message, main, message.$match[1]),
         type = 1, item_name = message.$match[7].trim(), item_info = message.text.replace(/^(.+)\n/i, '');
-    if (item_info == undefined)
+    if (item_info == message.text)
       item_info = "";
     if (player == undefined) return;
     if (message.$match[4] != undefined)
@@ -78,7 +78,7 @@ class InventoryCommands
       return message.send('Недостаточно места в инвентаре');
     let img = main.getPhoto(message, 0);
       player.items.push(new Item(main.conf.maxItemID++, item_name, item_info, type, img));
-    if (main.conf.maxItemID > 99999)
+    if (main.conf.maxItemID > 9999999)
       main.conf.maxItemID = 0;
     main.SavePlayers();
     main.saveConfigs();
