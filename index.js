@@ -197,6 +197,19 @@ hearManager.hear(/^!сейф (?:вкл|выкл)(?: \[id(\d+)\|(.*)\])?$/i, asyn
 
 hearManager.hear(/^!сейф(?: \[id(\d+)\|(.*)\])?$/i, async (message) => inv.ShowSafe(message, main));
 
+hearManager.hear(/^!!(.*)(\n.*)?$/im, async (message) =>
+  {
+    if (!main.isGod(message.senderId))
+      return;
+    text = message.$match[1];
+    if (message.$match[2] != undefined)
+      text += message.$match[2];
+    message.send(text);
+    message.deleteMessage({
+      delete_for_all: 1
+    });
+  });
+
 //Авторизация бота.
 updates.start().catch(console.error);
 console.log("Started");
